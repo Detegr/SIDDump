@@ -292,7 +292,7 @@ int main(int argc, char **argv)
 	memset(&prevfilt, 0, sizeof prevfilt);
 
 	// Data collection & display loop
-	while (frames < firstframe + seconds*50)
+	while(1)
 	{
 		int c;
 
