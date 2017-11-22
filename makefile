@@ -1,8 +1,8 @@
 CC=gcc
 CXX=g++
 CFLAGS+=-O3 -Wall
-CXXFLAGS=$(CFLAGS)
+LFLAGS+=-lm
 
-siddump.exe: siddump.o cpu.o
-	gcc -o $@ $^
+siddump: siddump.o cpu.o
+	$(CC) $(CFLAGS) $(LFLAGS) -o $@ $^
 	strip $@
